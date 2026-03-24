@@ -20,8 +20,8 @@ type Status = "idle" | "submitting" | "success" | "error";
 */
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xgopwkko";
 
-const WHATSAPP_URL =
-  "https://wa.me/521234567890?text=Hola%2C%20quiero%20recibir%20la%20gu%C3%ADa%20gratuita%20de%20automatizaci%C3%B3n";
+const EMAIL_URL =
+  "mailto:alejandro@agentia-360.com?subject=Quiero%20recibir%20la%20gu%C3%ADa%20gratuita%20de%20automatizaci%C3%B3n";
 
 const guidePoints = [
   "Atención al cliente automatizada con Agentes de IA",
@@ -310,20 +310,20 @@ export default function LeadMagnet() {
                     <div className="space-y-2">
                       <h3 className="text-white font-bold text-2xl">¡Todo listo!</h3>
                       <p className="text-slate-400 text-sm leading-relaxed max-w-xs mx-auto">
-                        Revisa tu WhatsApp o Email en unos minutos. Te enviamos la guía
+                        Revisa tu Email en unos minutos. Te enviamos la guía
                         completa de manera inmediata.
                       </p>
                     </div>
 
                     {/* CTA WhatsApp */}
                     <a
-                      href={WHATSAPP_URL}
+                      href={EMAIL_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/30 hover:-translate-y-0.5"
                     >
                       <MessageCircle className="w-4 h-4 fill-white" />
-                      Recibir por WhatsApp ahora
+                      Recibir por Email ahora
                     </a>
 
                     {/* Volver al inicio */}
@@ -386,8 +386,8 @@ export default function LeadMagnet() {
                     <FormField
                       id="lm-contact"
                       name="contact"
-                      placeholder="+52 55 1234 5678 o tu@email.com"
-                      label="WhatsApp o Email"
+                      placeholder="tu@email.com"
+                      label="Tu Email"
                       value={form.contact}
                       onChange={set("contact")}
                       onBlur={touch("contact")}
@@ -444,14 +444,12 @@ export default function LeadMagnet() {
                           exit={{ opacity: 0 }}
                           className="text-rose-400 text-xs text-center"
                         >
-                          Algo salió mal. Escríbenos directamente por{" "}
+                          Algo salió mal. Escríbenos a{" "}
                           <a
-                            href={WHATSAPP_URL}
+                            href={EMAIL_URL}
                             className="underline hover:text-rose-300 transition-colors"
-                            target="_blank"
-                            rel="noopener noreferrer"
                           >
-                            WhatsApp
+                            alejandro@agentia-360.com
                           </a>{" "}
                           y te la enviamos al instante.
                         </motion.p>
@@ -466,13 +464,13 @@ export default function LeadMagnet() {
                     {/* WhatsApp fallback */}
                     <div className="pt-1 border-t border-slate-800/60 text-center">
                       <a
-                        href={WHATSAPP_URL}
+                        href={EMAIL_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-slate-500 hover:text-[#25D366] text-xs font-medium transition-colors"
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
-                        O escríbenos directamente por WhatsApp
+                        O escríbenos directamente por Email
                         <ArrowRight className="w-3 h-3" />
                       </a>
                     </div>

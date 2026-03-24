@@ -57,13 +57,11 @@ export default function Footer() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/521234567890?text=Hola%2C%20quiero%20agendar%20una%20llamada%20con%20Agentia360"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-2xl shadow-green-500/20 hover:shadow-green-500/40 hover:-translate-y-0.5"
+              href="mailto:alejandro@agentia-360.com?subject=Quiero%20agendar%20una%20llamada%20con%20Agentia360"
+              className="inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-2xl shadow-violet-500/20 hover:shadow-violet-500/40 hover:-translate-y-0.5"
             >
-              <MessageCircle className="w-4 h-4 fill-white" />
-              Escribirnos por WhatsApp
+              <MessageCircle className="w-4 h-4" />
+              Escribirnos por Email
             </a>
             <a
               href="#pricing"
