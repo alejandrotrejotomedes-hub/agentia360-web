@@ -18,7 +18,7 @@ type Status = "idle" | "submitting" | "success" | "error";
   FORMSPREE: reemplaza "YOUR_FORM_ID" con tu ID real de formspree.io
   Ejemplo: https://formspree.io/f/xrgvkopw
 */
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xgopwkko";
 
 const WHATSAPP_URL =
   "https://wa.me/521234567890?text=Hola%2C%20quiero%20recibir%20la%20gu%C3%ADa%20gratuita%20de%20automatizaci%C3%B3n";
