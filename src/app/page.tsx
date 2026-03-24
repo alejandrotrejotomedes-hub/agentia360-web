@@ -3,9 +3,11 @@ import Hero           from "@/components/Hero";
 import Stats          from "@/components/Stats";
 import TechStack      from "@/components/TechStack";
 import BentoShowcase  from "@/components/BentoShowcase";
+import Portfolio      from "@/components/Portfolio";
 import Features       from "@/components/Features";
 import TrustBanner    from "@/components/TrustBanner";
 import DataFlow       from "@/components/DataFlow";
+import { N8nWorkflowBlock } from "@/components/ui/n8n-workflow-block-shadcnui";
 import Pillars        from "@/components/Pillars";
 import Team           from "@/components/Team";
 import Process        from "@/components/Process";
@@ -24,9 +26,13 @@ export default function Home() {
       <Stats />
       <TechStack />
       <BentoShowcase />
+      <Portfolio />
       <Features />
       <TrustBanner />
       <DataFlow />
+      <section className="px-4 py-16 max-w-5xl mx-auto">
+        <N8nWorkflowBlock />
+      </section>
       <Pillars />
       <Team />
       <Process />

@@ -7,7 +7,7 @@ import { Bot, Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Inicio",    href: "#home" },
   { label: "Servicios", href: "#features" },
-  { label: "Portafolio",href: "#showcase" },
+  { label: "Portafolio",href: "#portafolio" },
   { label: "Equipo",    href: "#team" },
   { label: "Inversión", href: "#pricing" },
   { label: "Contacto",  href: "#contact" },
