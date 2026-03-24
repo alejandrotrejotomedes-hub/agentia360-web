@@ -190,13 +190,15 @@ export default function LeadMagnet() {
     if (!allValid) return;
     setStatus("submitting");
     try {
+      const formData = new FormData();
+      formData.append("name", form.name);
+      formData.append("company", form.company);
+      formData.append("contact", form.contact);
+      formData.append("_subject", "Nueva solicitud de Guía Gratuita — Agentia360");
+
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          ...form,
-          _subject: "Nueva solicitud de Guía Gratuita — Agentia360",
-        }),
+        body: formData,
       });
       setStatus(res.ok ? "success" : "error");
     } catch {
