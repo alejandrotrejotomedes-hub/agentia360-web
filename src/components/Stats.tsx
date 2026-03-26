@@ -15,24 +15,24 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    end: 50, suffix: "+",
-    label: "Empresas Automatizadas",
-    description: "Negocios que ya operan con nuestras soluciones de IA en producción",
+    end: 4, suffix: " sem",
+    label: "Tiempo de Entrega",
+    description: "De la idea al producto en producción. Sin burocracia, sin procesos lentos.",
   },
   {
-    end: 200, suffix: "h+",
-    label: "Horas Ahorradas / Mes",
-    description: "Promedio de tiempo operativo recuperado por cada cliente activo",
+    end: 20, suffix: "+",
+    label: "Herramientas de IA",
+    description: "Stack tecnológico verificado y en producción: Claude, n8n, Supabase, Vercel y más.",
   },
   {
-    end: 15, suffix: "+",
-    label: "Integraciones Nativas",
-    description: "Sistemas y plataformas conectados en nuestro ecosistema tecnológico",
+    end: 0, suffix: " costo inicial",
+    label: "Infraestructura",
+    description: "Los MVPs corren en infraestructura gratuita. El cliente solo paga cuando crece.",
   },
   {
-    end: 98, suffix: "%",
-    label: "Clientes que Renuevan",
-    description: "De nuestros clientes amplían o renuevan su proyecto tras el primer entregable",
+    end: 3, suffix: " soluciones",
+    label: "Líneas de Producto",
+    description: "Páginas web, SaaS a medida y automatizaciones n8n. Todo en un solo equipo.",
   },
 ];
 

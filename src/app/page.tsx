@@ -34,7 +34,6 @@ export default function Home() {
         <N8nWorkflowBlock />
       </section>
       <Pillars />
-      <Team />
       <Process />
       <WhyAgentia />
       <LeadMagnet />
