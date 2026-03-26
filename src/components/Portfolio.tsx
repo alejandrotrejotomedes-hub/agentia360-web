@@ -21,7 +21,24 @@ export interface PortfolioProject {
 
 /* ─── Proyectos ─── */
 const projects: PortfolioProject[] = [
-  // Aquí irán los proyectos que el usuario vaya agregando
+  {
+    id: 1,
+    category: "saas",
+    title: "MediConsult",
+    description: "Landing de validación para SaaS de gestión de consultorio médico. Calculadora interactiva de pérdidas por no-shows, lista de espera con captura de leads y pricing. Construida en 1 sesión.",
+    tags: ["Next.js", "TypeScript", "Vercel", "SaaS", "Landing"],
+    link: "https://mediconsult-landing.vercel.app",
+    accent: "#0ea5e9",
+  },
+  {
+    id: 2,
+    category: "web",
+    title: "Ramen Yukihira",
+    description: "Sitio web para restaurante de ramen en CDMX con estética anime, menú interactivo y sección de ubicación. Construido en 1 sesión basándose solo en su perfil de Instagram.",
+    tags: ["Astro", "Vercel", "Dark Theme", "Restaurante"],
+    link: "https://www.instagram.com/ramenyukihira",
+    accent: "#d62828",
+  },
 ];
 
 /* ─── Tabs config ─── */
