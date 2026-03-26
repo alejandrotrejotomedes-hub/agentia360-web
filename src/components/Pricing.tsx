@@ -1,73 +1,78 @@
-import { Check, Rocket, TrendingUp, Building2 } from "lucide-react";
+import { Check, Globe, Workflow, LayoutDashboard } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 
 interface Plan {
   icon: React.ReactNode;
   name: string;
-  price: string;
-  period: string;
-  delivery: string;
+  initialPrice: string;
+  monthlyPrice: string;
   description: string;
   features: string[];
   cta: string;
+  ctaLink: string;
   highlighted: boolean;
   badge?: string;
+  accent: string;
 }
 
 const plans: Plan[] = [
   {
-    icon: <Rocket className="w-5 h-5 text-violet-400" />,
-    name: "MVP Inicial",
-    price: "$4,999",
-    period: "USD / proyecto",
-    delivery: "Entrega en 4 semanas",
-    description: "Tu primer Agente de IA o herramienta digital funcional. Valida la solución antes de escalar.",
+    icon: <Globe className="w-5 h-5" style={{ color: "#0ea5e9" }} />,
+    name: "Sitio Web",
+    initialPrice: "desde $3,500",
+    monthlyPrice: "$700/mes",
+    description: "Presencia online profesional para tu negocio. Diseño personalizado, correos corporativos y soporte incluido.",
     features: [
-      "1 caso de uso principal (IA o software)",
-      "Hasta 2 integraciones externas",
-      "Panel de administración básico",
-      "Soporte técnico 30 días post-entrega",
-      "Documentación de uso incluida",
+      "Diseño personalizado (no templates)",
+      "Adaptado a celular y computadora",
+      "Correos corporativos (tú@tunegocio.com)",
+      "Formulario de contacto + Google Maps",
+      "Hosting, dominio y respaldos activos",
+      "Soporte por WhatsApp en horario laboral",
     ],
-    cta: "Empezar mi MVP",
+    cta: "Quiero mi sitio web",
+    ctaLink: "#contacto",
     highlighted: false,
+    accent: "#0ea5e9",
   },
   {
-    icon: <TrendingUp className="w-5 h-5 text-white" />,
-    name: "Crecimiento Pro",
-    price: "$12,999",
-    period: "USD / proyecto",
-    delivery: "Entrega en 8 semanas",
-    description: "Solución completa con múltiples flujos, integraciones y panel de control avanzado.",
+    icon: <Workflow className="w-5 h-5 text-white" />,
+    name: "Automatización",
+    initialPrice: "desde $6,000",
+    monthlyPrice: "$1,200/mes",
+    description: "Conecta tus procesos. Captura leads, envía seguimientos y genera reportes sin intervención manual.",
     features: [
-      "Hasta 5 casos de uso o módulos",
-      "Integraciones ilimitadas",
-      "Panel de administración completo",
-      "Capacitación al equipo incluida",
-      "Soporte técnico 3 meses",
-      "Actualizaciones de mejora incluidas",
+      "Flujo automatizado a la medida",
+      "Integración con WhatsApp, CRM o email",
+      "Notificaciones y alertas en tiempo real",
+      "Dashboard de seguimiento incluido",
+      "Capacitación al equipo (1 sesión)",
+      "Monitoreo y mantenimiento del flujo",
     ],
-    cta: "Iniciar Proyecto Pro",
+    cta: "Automatizar mi negocio",
+    ctaLink: "#contacto",
     highlighted: true,
-    badge: "Más Elegido",
+    badge: "Más solicitado",
+    accent: "#8b5cf6",
   },
   {
-    icon: <Building2 className="w-5 h-5 text-slate-300" />,
-    name: "Empresarial",
-    price: "A medida",
-    period: "según alcance",
-    delivery: "Roadmap personalizado",
-    description: "Transformación digital completa. Para empresas que quieren automatizar múltiples áreas.",
+    icon: <LayoutDashboard className="w-5 h-5" style={{ color: "#10b981" }} />,
+    name: "App Web",
+    initialPrice: "desde $15,000",
+    monthlyPrice: "$1,500/mes",
+    description: "Sistema a la medida para organizar clientes, inventario, agenda o cualquier proceso de tu negocio.",
     features: [
-      "Módulos y Agentes ilimitados",
-      "Arquitectura escalable y segura",
-      "Gerente de proyecto dedicado",
-      "SLA de soporte garantizado",
-      "Integración con sistemas legacy",
-      "Capacitación continua al equipo",
+      "Sistema con login y roles de usuario",
+      "Dashboard con métricas de tu negocio",
+      "Base de datos en la nube segura",
+      "Exportación de reportes a PDF/Excel",
+      "Actualizaciones y mejoras mensuales",
+      "Soporte prioritario incluido",
     ],
-    cta: "Agendar Consultoría",
+    cta: "Cotizar mi app",
+    ctaLink: "#contacto",
     highlighted: false,
+    accent: "#10b981",
   },
 ];
 
@@ -79,17 +84,17 @@ export default function Pricing() {
       <div className="relative max-w-7xl mx-auto px-6">
         <FadeIn className="text-center mb-14">
           <span className="inline-block text-xs font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1.5 mb-4">
-            Planes de Inversión
+            Precios
           </span>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Elige el plan que{" "}
+            Sin sorpresas.{" "}
             <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-              acelera tu crecimiento
+              Sin letra pequeña.
             </span>
           </h2>
           <p className="text-slate-400 text-lg max-w-xl mx-auto">
-            Transparencia total. Pagas por el proyecto, recibes la solución
-            y la ownás completamente — sin sorpresas, sin letra pequeña.
+            Pago inicial para construir tu proyecto + mensualidad para mantenerlo activo.
+            Tu negocio siempre funcionando.
           </p>
         </FadeIn>
 
@@ -109,7 +114,7 @@ export default function Pricing() {
 
                 <div className="mb-6">
                   {/* Icono + nombre */}
-                  <div className="flex items-center gap-2.5 mb-4">
+                  <div className="flex items-center gap-2.5 mb-5">
                     <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${plan.highlighted ? "bg-violet-600" : "bg-slate-800"}`}>
                       {plan.icon}
                     </div>
@@ -118,16 +123,20 @@ export default function Pricing() {
                     </h3>
                   </div>
 
-                  {/* Precio */}
-                  <div className="flex items-baseline gap-1 mb-0.5">
-                    <span className="text-4xl font-extrabold text-white">{plan.price}</span>
+                  {/* Precios */}
+                  <div className="mb-4">
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="text-3xl font-extrabold text-white">{plan.initialPrice}</span>
+                    </div>
+                    <p className="text-slate-500 text-xs mb-2">pago inicial único</p>
+                    <div
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-lg"
+                      style={{ background: `${plan.accent}15`, color: plan.accent, border: `1px solid ${plan.accent}30` }}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: plan.accent }} />
+                      {plan.monthlyPrice} mantenimiento
+                    </div>
                   </div>
-                  <p className="text-slate-500 text-xs mb-1">{plan.period}</p>
-                  <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-4 ${
-                    plan.highlighted ? "bg-violet-500/20 text-violet-300" : "bg-slate-800 text-slate-400"
-                  }`}>
-                    ⚡ {plan.delivery}
-                  </span>
 
                   <div className={`h-px mb-4 ${plan.highlighted ? "bg-violet-500/30" : "bg-slate-800"}`} />
                   <p className="text-slate-400 text-sm leading-relaxed">{plan.description}</p>
@@ -137,13 +146,13 @@ export default function Pricing() {
                   <p className="text-white text-xs font-semibold uppercase tracking-wider mb-4">Qué incluye</p>
                   {plan.features.map((feature) => (
                     <div key={feature} className="flex items-start gap-2.5">
-                      <Check className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plan.highlighted ? "text-violet-400" : "text-violet-500"}`} />
+                      <Check className="w-4 h-4 flex-shrink-0 mt-0.5 text-violet-400" />
                       <span className="text-slate-300 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
 
-                <a href="#contact" className={`block w-full text-center font-semibold text-sm py-3 rounded-xl transition-all ${
+                <a href={plan.ctaLink} className={`block w-full text-center font-semibold text-sm py-3 rounded-xl transition-all ${
                   plan.highlighted
                     ? "bg-white text-violet-700 hover:bg-slate-100 shadow-xl shadow-white/10"
                     : "border border-slate-700 text-violet-400 hover:border-violet-500/50 hover:bg-violet-500/5"
@@ -157,9 +166,9 @@ export default function Pricing() {
 
         <FadeIn delay={0.3} className="mt-14 flex flex-wrap justify-center gap-8">
           {[
-            { icon: "🔒", label: "Código 100% tuyo al entregar" },
-            { icon: "⚡", label: "Primera versión en 4 semanas" },
-            { icon: "🤝", label: "Soporte post-entrega incluido" },
+            { icon: "🔒", label: "El proyecto es 100% tuyo" },
+            { icon: "📱", label: "Correos corporativos incluidos" },
+            { icon: "🤝", label: "Soporte por WhatsApp incluido" },
           ].map(({ icon, label }) => (
             <div key={label} className="flex items-center gap-2 text-slate-500 text-sm">
               <span>{icon}</span><span>{label}</span>

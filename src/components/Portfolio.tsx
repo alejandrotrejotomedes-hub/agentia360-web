@@ -17,6 +17,8 @@ export interface PortfolioProject {
   image?: string;          // URL de imagen o screenshot
   link?: string;           // URL del proyecto (opcional)
   accent: string;          // color de acento hex
+  price?: string;          // precio de suscripción (SaaS)
+  priceStatus?: "disponible" | "proximamente" | "validacion";
 }
 
 /* ─── Proyectos ─── */
@@ -25,18 +27,22 @@ const projects: PortfolioProject[] = [
     id: 1,
     category: "saas",
     title: "MediConsult",
-    description: "Landing de validación para SaaS de gestión de consultorio médico. Calculadora interactiva de pérdidas por no-shows, lista de espera con captura de leads y pricing. Construida en 1 sesión.",
-    tags: ["Next.js", "TypeScript", "Vercel", "SaaS", "Landing"],
+    description: "SaaS de gestión de consultorio para médicos independientes. Reduce el 20% de inasistencias con recordatorios automáticos por WhatsApp, agenda pública y sync con Google Calendar.",
+    tags: ["Next.js", "TypeScript", "Vercel", "SaaS", "WhatsApp"],
     link: "https://mediconsult-landing.vercel.app",
     accent: "#0ea5e9",
+    price: "$399/mes",
+    priceStatus: "validacion",
   },
   {
     id: 2,
     category: "saas",
     title: "Finantia",
-    description: "Sistema de finanzas personales con dashboard de quincena, flujo histórico, análisis por categorías y módulo de ahorros con seguimiento de metas. Stack completo con autenticación y base de datos real.",
+    description: "App de finanzas para parejas. Dashboard compartido, control de gastos, análisis de tarjetas de crédito, metas de ahorro y multi-divisa. Reemplaza el Excel con una app real.",
     tags: ["Next.js", "Supabase", "TypeScript", "Chart.js", "Fintech"],
     accent: "#8b5cf6",
+    price: "$499/mes",
+    priceStatus: "proximamente",
   },
   {
     id: 3,
@@ -46,6 +52,8 @@ const projects: PortfolioProject[] = [
     tags: ["Next.js", "Supabase", "OpenAI", "TypeScript", "Multi-tenant"],
     link: "https://recruitment-app-nine-plum.vercel.app",
     accent: "#10b981",
+    price: "A medida",
+    priceStatus: "disponible",
   },
   {
     id: 4,
@@ -170,7 +178,37 @@ function ProjectCard({ project, index }: { project: PortfolioProject; index: num
 
       {/* Contenido */}
       <div className="p-5">
-        <h3 className="text-white font-semibold text-base mb-1.5">{project.title}</h3>
+        <div className="flex items-start justify-between gap-2 mb-1.5">
+          <h3 className="text-white font-semibold text-base">{project.title}</h3>
+          {project.price && (
+            <div className="flex flex-col items-end shrink-0">
+              <span
+                className="text-sm font-bold whitespace-nowrap"
+                style={{ color: project.accent }}
+              >
+                {project.price}
+              </span>
+              {project.priceStatus && (
+                <span className="text-[10px] font-medium mt-0.5 px-1.5 py-0.5 rounded-full"
+                  style={{
+                    background: project.priceStatus === "disponible"
+                      ? `${project.accent}20`
+                      : project.priceStatus === "validacion"
+                      ? "#f59e0b20"
+                      : "#64748b20",
+                    color: project.priceStatus === "disponible"
+                      ? project.accent
+                      : project.priceStatus === "validacion"
+                      ? "#f59e0b"
+                      : "#94a3b8",
+                  }}
+                >
+                  {project.priceStatus === "disponible" ? "Disponible" : project.priceStatus === "validacion" ? "En validación" : "Próximamente"}
+                </span>
+              )}
+            </div>
+          )}
+        </div>
         <p className="text-slate-400 text-sm leading-relaxed mb-4">{project.description}</p>
 
         {/* Tags */}
