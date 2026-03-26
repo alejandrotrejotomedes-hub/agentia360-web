@@ -172,8 +172,8 @@ export default function WhyAgentia() {
         {/* Bottom stamp */}
         <FadeIn delay={0.35} className="mt-14 text-center">
           <p className="text-slate-500 text-sm italic">
-            "No solo imaginamos el futuro de tu empresa —{" "}
-            <span className="text-slate-300 not-italic font-semibold">lo construimos.</span>"
+            "Yo también estoy construyendo mi negocio. Sé exactamente lo que sientes —{" "}
+            <span className="text-slate-300 not-italic font-semibold">y por eso me importa que el tuyo funcione.</span>"
           </p>
         </FadeIn>
 

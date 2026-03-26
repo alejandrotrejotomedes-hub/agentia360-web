@@ -44,29 +44,30 @@ export default function Hero() {
       {/* Blobs */}
       <div className="absolute top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-violet-600/10 blur-[130px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-indigo-600/8 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-amber-500/6 blur-[110px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center w-full">
 
         {/* ── Izquierda: Copy ── */}
         <motion.div className="flex flex-col gap-8" variants={container} initial="hidden" animate="show">
 
-          <motion.div variants={item} className="inline-flex items-center gap-2 bg-violet-600/10 border border-violet-500/20 rounded-full px-4 py-1.5 w-fit">
-            <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
-            <span className="text-violet-300 text-xs font-medium">Software House · IA para fundadores</span>
+          <motion.div variants={item} className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-4 py-1.5 w-fit">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+            <span className="text-amber-300 text-xs font-medium">Hecho en México · Por emprendedores, para emprendedores</span>
           </motion.div>
 
           <motion.h1 variants={item} className="text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-white">
-            Eleva tu empresa al siguiente nivel con{" "}
-            <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-              Agentes de IA
+            Tu negocio merece{" "}
+            <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+              tecnología real
             </span>{" "}
-            y Software a Medida
+            sin agencias enormes ni presupuestos imposibles
           </motion.h1>
 
           <motion.p variants={item} className="text-slate-400 text-lg leading-relaxed max-w-lg">
-            Creamos software a medida que libera el potencial de tu equipo y
-            automatiza tu crecimiento. Agentes de IA, herramientas personalizadas
-            e integraciones que trabajan para ti, las 24 horas del día.
+            También soy emprendedor. Sé lo que cuesta arrancar y lo que vale cada peso invertido.
+            Por eso construyo sitios web, apps y automatizaciones con IA que realmente funcionan —
+            a precios que tienen sentido para negocios que están creciendo.
           </motion.p>
 
           <motion.div variants={item} className="flex flex-col gap-3">
@@ -74,35 +75,35 @@ export default function Hero() {
             <div className="flex items-center gap-2 w-fit">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse flex-shrink-0" />
               <span className="text-amber-400/90 text-xs font-semibold tracking-wide">
-                Disponibilidad limitada · Aceptamos nuevos proyectos este mes
+                Agenda una llamada gratuita de 30 min — sin compromiso
               </span>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-semibold text-base px-7 py-3.5 rounded-xl transition-colors cursor-pointer"
+                href="#contacto"
+                className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-semibold text-base px-7 py-3.5 rounded-xl transition-colors cursor-pointer"
                 animate={{
                   boxShadow: [
-                    "0 8px 30px rgba(139,92,246,0.35)",
-                    "0 8px 50px rgba(139,92,246,0.65)",
-                    "0 8px 30px rgba(139,92,246,0.35)",
+                    "0 8px 30px rgba(245,158,11,0.35)",
+                    "0 8px 50px rgba(245,158,11,0.60)",
+                    "0 8px 30px rgba(245,158,11,0.35)",
                   ],
                 }}
                 transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Agendar Diagnóstico de Automatización
+                Platiquemos — es gratis
                 <ArrowRight className="w-4 h-4" />
               </motion.a>
               <a
-                href="#showcase"
+                href="#portafolio"
                 className="inline-flex items-center justify-center gap-2 border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white font-medium text-base px-7 py-3.5 rounded-xl transition-all hover:bg-white/5"
               >
-                <Play className="w-4 h-4 text-violet-400 fill-violet-400" />
-                Ver Portafolio
+                <Play className="w-4 h-4 text-amber-400 fill-amber-400" />
+                Ver Proyectos
               </a>
             </div>
           </motion.div>
@@ -110,12 +111,12 @@ export default function Hero() {
           {/* Bullets de confianza */}
           <motion.div variants={item} className="flex flex-col gap-2">
             {[
-              "Entrega en 4 semanas o menos",
-              "Código exclusivo, diseñado para tu industria",
-              "Soporte técnico incluido post-entrega",
+              "Trato directo con quien construye tu proyecto",
+              "Precios en MXN, sin sorpresas ni letra pequeña",
+              "Soporte por WhatsApp en horario laboral",
             ].map((text) => (
               <div key={text} className="flex items-center gap-2.5 text-slate-400 text-sm">
-                <CheckCircle2 className="w-4 h-4 text-violet-400 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
                 {text}
               </div>
             ))}
@@ -193,7 +194,7 @@ export default function Hero() {
               {[
                 { v: "24/7",  l: "Disponible" },
                 { v: "<1s",   l: "Respuesta"  },
-                { v: "50+",   l: "Empresas"   },
+                { v: "MXN",   l: "Sin dólares" },
               ].map(({ v, l }) => (
                 <div key={l} className="bg-slate-900/80 border border-slate-800/60 rounded-xl p-3 text-center">
                   <p className="text-white font-bold text-base leading-tight">{v}</p>
