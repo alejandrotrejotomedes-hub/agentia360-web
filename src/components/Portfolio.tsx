@@ -56,6 +56,46 @@ const projects: PortfolioProject[] = [
     link: "https://www.instagram.com/ramenyukihira",
     accent: "#d62828",
   },
+  {
+    id: 5,
+    category: "n8n",
+    title: "WhatsApp Chatbot IA con RAG",
+    description: "Chatbot conectado a WhatsApp Business que responde con IA usando los documentos del negocio como base de conocimiento. Sin intervención humana, 24/7.",
+    tags: ["n8n", "WhatsApp", "OpenAI", "RAG", "Pinecone"],
+    accent: "#25d366",
+  },
+  {
+    id: 6,
+    category: "n8n",
+    title: "Voice Chatbot para Restaurantes y Negocios",
+    description: "Bot de voz con ElevenLabs y OpenAI que atiende clientes por audio. Transcribe, responde con IA y devuelve respuesta de voz. Ideal para restaurantes, clínicas y hoteles.",
+    tags: ["n8n", "ElevenLabs", "OpenAI", "Voz", "Atención al Cliente"],
+    accent: "#f59e0b",
+  },
+  {
+    id: 7,
+    category: "n8n",
+    title: "Generador de Contenido para Redes Sociales",
+    description: "Automatización que genera posts optimizados para Instagram, LinkedIn y X con IA a partir del tema y voz de marca del negocio. Listo para publicar.",
+    tags: ["n8n", "OpenAI", "Instagram", "LinkedIn", "Contenido"],
+    accent: "#e1306c",
+  },
+  {
+    id: 8,
+    category: "n8n",
+    title: "Agente IA para DMs de Instagram",
+    description: "Responde automáticamente los mensajes directos de Instagram usando IA. Clasifica intenciones, responde preguntas frecuentes y deriva al humano cuando es necesario.",
+    tags: ["n8n", "Instagram", "Manychat", "OpenAI", "DMs"],
+    accent: "#833ab4",
+  },
+  {
+    id: 9,
+    category: "n8n",
+    title: "Investigador de Leads para Ventas",
+    description: "Agente que investiga empresas y prospectos en internet, identifica tomadores de decisión y genera un perfil completo listo para la llamada de ventas.",
+    tags: ["n8n", "OpenAI", "Web Scraping", "Ventas", "CRM"],
+    accent: "#0ea5e9",
+  },
 ];
 
 /* ─── Tabs config ─── */
