@@ -32,6 +32,23 @@ const projects: PortfolioProject[] = [
   },
   {
     id: 2,
+    category: "saas",
+    title: "Finantia",
+    description: "Sistema de finanzas personales con dashboard de quincena, flujo histórico, análisis por categorías y módulo de ahorros con seguimiento de metas. Stack completo con autenticación y base de datos real.",
+    tags: ["Next.js", "Supabase", "TypeScript", "Chart.js", "Fintech"],
+    accent: "#8b5cf6",
+  },
+  {
+    id: 3,
+    category: "saas",
+    title: "RecruitmentOS",
+    description: "Plataforma SaaS de reclutamiento con IA. Análisis de CVs con score de paridad, pipeline Kanban por etapas, publicación multi-canal de vacantes y dashboard de métricas con funnel de conversión.",
+    tags: ["Next.js", "Supabase", "OpenAI", "TypeScript", "Multi-tenant"],
+    link: "https://recruitment-app-nine-plum.vercel.app",
+    accent: "#10b981",
+  },
+  {
+    id: 4,
     category: "web",
     title: "Ramen Yukihira",
     description: "Sitio web para restaurante de ramen en CDMX con estética anime, menú interactivo y sección de ubicación. Construido en 1 sesión basándose solo en su perfil de Instagram.",
