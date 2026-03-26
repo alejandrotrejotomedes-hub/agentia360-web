@@ -71,6 +71,8 @@ const projects: PortfolioProject[] = [
     description: "Chatbot conectado a WhatsApp Business que responde con IA usando los documentos del negocio como base de conocimiento. Sin intervención humana, 24/7.",
     tags: ["n8n", "WhatsApp", "OpenAI", "RAG", "Pinecone"],
     accent: "#25d366",
+    price: "$15,000 + $1,500/mes",
+    priceStatus: "disponible",
   },
   {
     id: 6,
@@ -79,6 +81,8 @@ const projects: PortfolioProject[] = [
     description: "Bot de voz con ElevenLabs y OpenAI que atiende clientes por audio. Transcribe, responde con IA y devuelve respuesta de voz. Ideal para restaurantes, clínicas y hoteles.",
     tags: ["n8n", "ElevenLabs", "OpenAI", "Voz", "Atención al Cliente"],
     accent: "#f59e0b",
+    price: "$12,000 + $1,500/mes",
+    priceStatus: "disponible",
   },
   {
     id: 7,
@@ -87,6 +91,8 @@ const projects: PortfolioProject[] = [
     description: "Automatización que genera posts optimizados para Instagram, LinkedIn y X con IA a partir del tema y voz de marca del negocio. Listo para publicar.",
     tags: ["n8n", "OpenAI", "Instagram", "LinkedIn", "Contenido"],
     accent: "#e1306c",
+    price: "$6,000 + $800/mes",
+    priceStatus: "disponible",
   },
   {
     id: 8,
@@ -95,6 +101,8 @@ const projects: PortfolioProject[] = [
     description: "Responde automáticamente los mensajes directos de Instagram usando IA. Clasifica intenciones, responde preguntas frecuentes y deriva al humano cuando es necesario.",
     tags: ["n8n", "Instagram", "Manychat", "OpenAI", "DMs"],
     accent: "#833ab4",
+    price: "$12,000 + $1,200/mes",
+    priceStatus: "disponible",
   },
   {
     id: 9,
@@ -103,6 +111,8 @@ const projects: PortfolioProject[] = [
     description: "Agente que investiga empresas y prospectos en internet, identifica tomadores de decisión y genera un perfil completo listo para la llamada de ventas.",
     tags: ["n8n", "OpenAI", "Web Scraping", "Ventas", "CRM"],
     accent: "#0ea5e9",
+    price: "$10,000 + $1,200/mes",
+    priceStatus: "disponible",
   },
 ];
 
